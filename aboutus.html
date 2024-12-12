@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <style>
+          .feature-icon {
+        width: 4rem;
+        height: 4rem;
+        border-radius: .75rem;
+    }
+
+.grid-container {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 900px;
+    gap: 2rem;
+}
+
+.image {
+    max-width: 500px;
+}
+
+.carousel {
+      width: 150%;
+      height: 300px; /* Adjust height as needed */
+      overflow: hidden;
+
+    }
+
+    .carousel-container {
+      width: 50%;
+      height: 50px; /* Adjust height as needed */
+      overflow: hidden;
+      position: relative;
+    }
+
+    .carousel-track {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .carousel-item {
+      width: 5.5%; /* Each image occupies 1/8th of the width */
+      height: 100%;
+      position: relative;
+    }
+
+    .carousel-item img {
+      width: 50%;
+      height:50%;
+
+    }
+
+    .carousel-container:hover .carousel-track {
+      transition: transform 0.5s ease-in-out;
+      transform: translateX(0);
+    }
+
+    /* Autoplay */
+    .carousel-track {
+      animation: slide 20s linear infinite;
+    }
+
+    @keyframes slide {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-75%); }
+    }
+
+    </style>
+
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"><img src="./fire arm logo white.svg" height="60" alt="jco logo"> <b>JCO Firearms Training</b></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">About Us</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="./index.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Services
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="./index.html">Law</a></li>
+                  <li><a class="dropdown-item" href="./index.html">Business Purpose</a></li>
+                  <li><a class="dropdown-item" href="./index.html">Handle and Use</a></li>
+                </ul>
+              </li>
+            </ul>
+            <button type="button" class="btn btn-primary">BOOK TRAINING</button>
+          </div>
+        </div>
+      </nav>
+      
+
+      <div class="container">
+        <div class="display-5 fw-bold text-body-emphasis 1h-1 mb-1 pt-4"><h1>About Us</h1></class=></div>
+        <div class="lead item">JCO Firearm Training is a professional firearm training business located in Durban, South Africa. Our experienced instructor <b>James O'Reilly</b> is dedicated to teaching safety, handling, and responsible use of firearms.</div>
+        <div class="lead item">We offer a range of training programs tailored to individual needs. Whether you are a beginner or want to advance your skills, we help you gain the confidence and competence required for safe firearm use.</div>
+      </div>
+
+      <div class="container"> 
+        <div class="row">
+          <div class="col-md-6 image"> 
+            <img src="./James Oreillyweb.png" class="img-fluid" alt="James O reilly">
+            <div class="lead itema"><h5>James O'Reilly (Instructor)</h5></div>
+            <div class="lead itema">James O'Reilly is a dedicated Firearm Training instructor known for his expertise in firearm safety and proficiency. With years of experience, he provides comprehensive training to individuals and groups, ensuring they understand the fundamentals and advanced shooting techniques.</div>
+          </div>
+          <div class="col-md-6 image">
+            <img src="./Chrystal oreilly.png" class="img-fluid" alt="James O reilly">
+            <div class="lead itema"><h5>Chrystalla O'Reilly (Key administrator)</h5></div>
+            <div class="lead itema">Chrystalla O'Reilly is a key administrator at JCO Firearm Training, where she plays a crucial role in managing the day-to-day operations. Known for her organizational skills and attention to detail, Chrystal ensures that the training programs run smoothly and efficiently.</div>
+          </div>
+        </div>
+      </div>
+      
+
+      <h2 class="pb-3 pt-3 border-bottom text-center">Contact us for free a consultation</h2>
+      
+      <div class="carousel">
+        <div class="carousel-track" id="carouselTrack">
+          <div class="carousel-slide"><img src="./image1.png" alt="Image 1"></div>
+          <div class="carousel-slide"><img src="./image2.png" alt="Image 2"></div>
+          <div class="carousel-slide"><img src="./image3.png" alt="Image 3"></div>
+          <div class="carousel-slide"><img src="./image4.png" alt="Image 4"></div>
+          <div class="carousel-slide"><img src="./image5.png" alt="Image 5"></div>
+          <div class="carousel-slide"><img src="./image6.png" alt="Image 6"></div>
+          <div class="carousel-slide"><img src="./image7.png" alt="Image 1"></div>
+          <div class="carousel-slide"><img src="./image8.png" alt="Image 2"></div>
+        </div>
+      </div>
+    
+      <script>
+        const carouselTrack = document.getElementById('carouselTrack');
+        let slideWidth = 100; // Adjust based on your image width
+        let currentPosition = 5;
+    
+        function moveCarousel() {
+          currentPosition -= slideWidth;
+          carouselTrack.style.transform = `translateX(${currentPosition}px)`;
+          if (currentPosition <= -slideWidth * 7) {
+            currentPosition = 0;
+            carouselTrack.style.transform = `translateX(${currentPosition}px)`;
+          }
+        }
+    
+        let autoplay = setInterval(moveCarousel, 3000); // Adjust autoplay interval
+    
+        carouselTrack.addEventListener('mouseover', () => {
+          clearInterval(autoplay);
+        });
+    
+        carouselTrack.addEventListener('mouseout', () => {
+          autoplay = setInterval(moveCarousel, 3000);
+        });
+      </script>
+
+      
+      <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-2 border-top">
+        <div class="col mb-3">
+          <a href="/" class="d-flex align-items-center mb-3 link-body-emphasis text-decoration-none">
+            <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
+          </a>
+          <p class="text-body-secondary">© JCO firearm Training</p>
+        </div>
+
+        <div class="col mb-3">
+
+        </div>
+    
+        <div class="col mb-3">
+          <h5>Contacts info</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">James O'Reilly (Instructor)</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Contact: 078 494 2731</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Alt no: 083 540 8403</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Email: admin@jcofirearms.co.za</a></li>
+          </ul>
+        </div>
+    
+        <div class="col mb-3">
+          <h5>Address</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">506/508 Sarnia Road</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Seaview</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Durban</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">4094</a></li>
+          </ul>
+        </div>
+    
+        <div class="col mb-3">
+            <h5>Section</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2"><a href="./index.html" class="nav-link p-0 text-body-secondary">Home</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About Us</a></li>
+              <li class="nav-item mb-2"><a href="./index.html" class="nav-link p-0 text-body-secondary">Service</a></li>
+            </ul>
+          </div>
+      </footer>
+    </div>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
