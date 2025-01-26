@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Carousel</title>
+  <style>
+ body {
+      margin: 0;
+      padding: 0;
+      font-family: sans-serif;
+    }
+
+    .carousel {
+      position: fixed;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 600px;
+      overflow: hidden;
+    }
+
+    .carousel-track {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .carousel-slide {
+      width: 100px; /* Adjust image width */
+      height: 150px; /* Adjust image height */
+      margin: 0 px; /* Adjust spacing between images */
+    }
+
+    .carousel-slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .carousel:hover .carousel-track {
+      transition: transform 0s;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="carousel">
+    <div class="carousel-track" id="carouselTrack">
+      <div class="carousel-slide"><img src="./image1.png" alt="Image 1"></div>
+      <div class="carousel-slide"><img src="./image2.png" alt="Image 2"></div>
+      <div class="carousel-slide"><img src="./image3.png" alt="Image 3"></div>
+      <div class="carousel-slide"><img src="./image4.png" alt="Image 4"></div>
+      <div class="carousel-slide"><img src="./image5.png" alt="Image 5"></div>
+      <div class="carousel-slide"><img src="./image6.png" alt="Image 6"></div>
+      <div class="carousel-slide"><img src="./image7.png" alt="Image 1"></div>
+      <div class="carousel-slide"><img src="./image8.png" alt="Image 2"></div>
+    </div>
+  </div>
+
+  <script>
+    const carouselTrack = document.getElementById('carouselTrack');
+    let slideWidth = 100; // Adjust based on your image width
+    let currentPosition = 0;
+
+    function moveCarousel() {
+      currentPosition -= slideWidth;
+      carouselTrack.style.transform = `translateX(${currentPosition}px)`;
+      if (currentPosition <= -slideWidth * 7) {
+        currentPosition = 0;
+        carouselTrack.style.transform = `translateX(${currentPosition}px)`;
+      }
+    }
+
+    let autoplay = setInterval(moveCarousel, 3000); // Adjust autoplay interval
+
+    carouselTrack.addEventListener('mouseover', () => {
+      clearInterval(autoplay);
+    });
+
+    carouselTrack.addEventListener('mouseout', () => {
+      autoplay = setInterval(moveCarousel, 3000);
+    });
+  </script>
+
+</body>
+</html>
